@@ -31,6 +31,7 @@ namespace SimpleCalculatorApp
             btnThree.Click += NumberButton_Click;
             btnZero.Click += NumberButton_Click;
             btnDecimal.Click += NumberButton_Click;
+            btnNegOrPos.Click += PlusOrNeg_Click;
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -110,6 +111,19 @@ namespace SimpleCalculatorApp
 
             lblValInput.Text = _expression;
         }
+
+        // Method for when pressing the +/- Button
+        private void PlusOrNeg_Click(object? sender, EventArgs e)
+        {
+            if (!decimal.TryParse(_currentInput, out decimal number))
+            {
+                return;
+            }
+            number *= -1;
+            _currentInput = number.ToString();
+            lblValInput.Text = _expression + _currentInput;
+        }
+
 
         // Method for the calculation
         private string _operation = "";
