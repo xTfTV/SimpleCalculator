@@ -15,10 +15,10 @@ namespace SimpleCalculatorApp
             btnBackspace.Click += BackspaceButton_Click;
             btnAC.Click += ClearButton_Click;
             btnEquals.Click += EqualsButton_Click;
-            btnModulus.Click += NumberButton_Click;
-            btnDivision.Click += NumberButton_Click;
-            btnMultiplication.Click += NumberButton_Click;
-            btnSubtraction.Click += NumberButton_Click;
+            btnModulus.Click += OperatorButton_Click;
+            btnDivision.Click += OperatorButton_Click;
+            btnMultiplication.Click += OperatorButton_Click;
+            btnSubtraction.Click += OperatorButton_Click;
             btnPlus.Click += OperatorButton_Click;
             btnSeven.Click += NumberButton_Click;
             btnEight.Click += NumberButton_Click;
